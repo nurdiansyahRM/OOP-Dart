@@ -1,18 +1,37 @@
 class Animal{
-  String name = '';
-  int age;
-  double weight;
- Animal(this.name, this.age, this.weight);
+  String _name = '';
+  int _age;
+  double _weight;
+  //named construktor
+ Animal(this._name, this._age, this._weight);
+
+ //setter
+  set name(String value){
+    this._name = value;
+  }
+  set age(int value){
+    this._age = value;
+  }
+  set weight(double value){
+    this._weight = value;
+  }
+  String get name{
+  return this._name;
+  }
+  int get age{
+    return this._age;
+  }
+  double get weight => _weight;
 
  void eat(){
-   print(this.name + ' is eating');
-   weight = weight + 0.2;
+   print(this._name + ' is eating');
+   this._weight = _weight + 2;
  }
  void sleep(){
-   print(this.name + ' is sleeping');
+   print(this._name + ' is sleeping');
  }
  void pooping(){
-   print(this.name + ' is pooping');
-   weight = weight - 0.1;
+   print(this._name + ' is pooping');
+   this._weight = _weight - 1;
  }
 }
